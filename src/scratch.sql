@@ -60,5 +60,5 @@ CROSS JOIN city;
 SELECT*FROM city
 LEFT JOIN  emplovee
 ON city.city_id = emplovee.employee_id
-WHERE emplovee.employee_id=null AND emplovee.first_name=null
+WHERE emplovee.employee_id is null AND emplovee.first_name is null
 ORDER BY city_name;
