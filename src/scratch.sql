@@ -55,10 +55,10 @@ SELECT*FROM city
 
 SELECT emplovee.first_name,city.city_name
 FROM emplovee
-         CROSS JOIN city;
+CROSS JOIN city;
 ---
 SELECT*FROM city
-                FULL OUTER JOIN emplovee
-                                ON city.city_id = emplovee.employee_id
-WHERE emplovee.employee_id==
+LEFT JOIN  emplovee
+ON city.city_id = emplovee.employee_id
+WHERE emplovee.employee_id=null AND emplovee.first_name=null
 ORDER BY city_name;
